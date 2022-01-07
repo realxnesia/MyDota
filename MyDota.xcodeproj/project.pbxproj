@@ -9,13 +9,23 @@
 /* Begin PBXBuildFile section */
 		70651997278824C200489194 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70651996278824C200489194 /* AppDelegate.swift */; };
 		70651999278824C200489194 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70651998278824C200489194 /* SceneDelegate.swift */; };
-		7065199B278824C200489194 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7065199A278824C200489194 /* ViewController.swift */; };
-		7065199E278824C200489194 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7065199C278824C200489194 /* Main.storyboard */; };
 		706519A0278824C300489194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7065199F278824C300489194 /* Assets.xcassets */; };
 		706519A3278824C300489194 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706519A1278824C300489194 /* LaunchScreen.storyboard */; };
 		706519AE278824C300489194 /* MyDotaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519AD278824C300489194 /* MyDotaTests.swift */; };
 		706519B8278824C300489194 /* MyDotaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519B7278824C300489194 /* MyDotaUITests.swift */; };
 		706519BA278824C300489194 /* MyDotaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519B9278824C300489194 /* MyDotaUITestsLaunchTests.swift */; };
+		706519CA2788282200489194 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519C92788282200489194 /* AppColors.swift */; };
+		706519D52788293100489194 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519D32788293100489194 /* ViewController.swift */; };
+		706519D62788293100489194 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706519D42788293100489194 /* ViewController.xib */; };
+		706519DB27882C0E00489194 /* ButtonRolesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519D927882C0E00489194 /* ButtonRolesTVCell.swift */; };
+		706519DC27882C0E00489194 /* ButtonRolesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706519DA27882C0E00489194 /* ButtonRolesTVCell.xib */; };
+		706519E12788310D00489194 /* ModelHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519E02788310D00489194 /* ModelHome.swift */; };
+		706519E32788324100489194 /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519E22788324100489194 /* LocalData.swift */; };
+		706519E52788351F00489194 /* ConstantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519E42788351F00489194 /* ConstantData.swift */; };
+		706519E827885E8700489194 /* HeroCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519E627885E8700489194 /* HeroCVCell.swift */; };
+		706519E927885E8700489194 /* HeroCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706519E727885E8700489194 /* HeroCVCell.xib */; };
+		706519F12788659A00489194 /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519EF2788659A00489194 /* HeroDetailViewController.swift */; };
+		706519F22788659A00489194 /* HeroDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706519F02788659A00489194 /* HeroDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +49,6 @@
 		70651993278824C200489194 /* MyDota.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDota.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70651996278824C200489194 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70651998278824C200489194 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7065199A278824C200489194 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7065199D278824C200489194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7065199F278824C300489194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		706519A2278824C300489194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		706519A4278824C300489194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +57,18 @@
 		706519B3278824C300489194 /* MyDotaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDotaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		706519B7278824C300489194 /* MyDotaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDotaUITests.swift; sourceTree = "<group>"; };
 		706519B9278824C300489194 /* MyDotaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDotaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		706519C92788282200489194 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		706519D32788293100489194 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		706519D42788293100489194 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		706519D927882C0E00489194 /* ButtonRolesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRolesTVCell.swift; sourceTree = "<group>"; };
+		706519DA27882C0E00489194 /* ButtonRolesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonRolesTVCell.xib; sourceTree = "<group>"; };
+		706519E02788310D00489194 /* ModelHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHome.swift; sourceTree = "<group>"; };
+		706519E22788324100489194 /* LocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
+		706519E42788351F00489194 /* ConstantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantData.swift; sourceTree = "<group>"; };
+		706519E627885E8700489194 /* HeroCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCVCell.swift; sourceTree = "<group>"; };
+		706519E727885E8700489194 /* HeroCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCVCell.xib; sourceTree = "<group>"; };
+		706519EF2788659A00489194 /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
+		706519F02788659A00489194 /* HeroDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +119,11 @@
 		70651995278824C200489194 /* MyDota */ = {
 			isa = PBXGroup;
 			children = (
-				70651996278824C200489194 /* AppDelegate.swift */,
-				70651998278824C200489194 /* SceneDelegate.swift */,
-				7065199A278824C200489194 /* ViewController.swift */,
-				7065199C278824C200489194 /* Main.storyboard */,
-				7065199F278824C300489194 /* Assets.xcassets */,
+				706519C7278827E400489194 /* Features */,
+				706519CC2788289100489194 /* Data */,
+				706519CB2788287000489194 /* Resources */,
+				706519C8278827FA00489194 /* Utilities */,
+				706519C6278827DC00489194 /* Application */,
 				706519A1278824C300489194 /* LaunchScreen.storyboard */,
 				706519A4278824C300489194 /* Info.plist */,
 			);
@@ -125,6 +145,136 @@
 				706519B9278824C300489194 /* MyDotaUITestsLaunchTests.swift */,
 			);
 			path = MyDotaUITests;
+			sourceTree = "<group>";
+		};
+		706519C6278827DC00489194 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				70651996278824C200489194 /* AppDelegate.swift */,
+				70651998278824C200489194 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		706519C7278827E400489194 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				706519CD278828F000489194 /* Home */,
+				706519EA2788635400489194 /* Hero Detail */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		706519C8278827FA00489194 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				706519C92788282200489194 /* AppColors.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		706519CB2788287000489194 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7065199F278824C300489194 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		706519CC2788289100489194 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				706519E22788324100489194 /* LocalData.swift */,
+				706519E42788351F00489194 /* ConstantData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		706519CD278828F000489194 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				706519D02788290300489194 /* Controller */,
+				706519CF278828FE00489194 /* View */,
+				706519CE278828F700489194 /* Model */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		706519CE278828F700489194 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				706519E02788310D00489194 /* ModelHome.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		706519CF278828FE00489194 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				706519D42788293100489194 /* ViewController.xib */,
+				706519D827882BD000489194 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		706519D02788290300489194 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				706519D32788293100489194 /* ViewController.swift */,
+				706519D727882BC500489194 /* Cell */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		706519D727882BC500489194 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				706519D927882C0E00489194 /* ButtonRolesTVCell.swift */,
+				706519E627885E8700489194 /* HeroCVCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		706519D827882BD000489194 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				706519DA27882C0E00489194 /* ButtonRolesTVCell.xib */,
+				706519E727885E8700489194 /* HeroCVCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		706519EA2788635400489194 /* Hero Detail */ = {
+			isa = PBXGroup;
+			children = (
+				706519EE2788637C00489194 /* Controller */,
+				706519ED2788637700489194 /* View */,
+				706519EB2788636C00489194 /* Model */,
+			);
+			path = "Hero Detail";
+			sourceTree = "<group>";
+		};
+		706519EB2788636C00489194 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		706519ED2788637700489194 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				706519F02788659A00489194 /* HeroDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		706519EE2788637C00489194 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				706519EF2788659A00489194 /* HeroDetailViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +381,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				706519E927885E8700489194 /* HeroCVCell.xib in Resources */,
 				706519A3278824C300489194 /* LaunchScreen.storyboard in Resources */,
+				706519DC27882C0E00489194 /* ButtonRolesTVCell.xib in Resources */,
+				706519F22788659A00489194 /* HeroDetailViewController.xib in Resources */,
+				706519D62788293100489194 /* ViewController.xib in Resources */,
 				706519A0278824C300489194 /* Assets.xcassets in Resources */,
-				7065199E278824C200489194 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +411,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7065199B278824C200489194 /* ViewController.swift in Sources */,
+				706519DB27882C0E00489194 /* ButtonRolesTVCell.swift in Sources */,
+				706519F12788659A00489194 /* HeroDetailViewController.swift in Sources */,
+				706519E52788351F00489194 /* ConstantData.swift in Sources */,
+				706519CA2788282200489194 /* AppColors.swift in Sources */,
 				70651997278824C200489194 /* AppDelegate.swift in Sources */,
+				706519D52788293100489194 /* ViewController.swift in Sources */,
+				706519E12788310D00489194 /* ModelHome.swift in Sources */,
 				70651999278824C200489194 /* SceneDelegate.swift in Sources */,
+				706519E32788324100489194 /* LocalData.swift in Sources */,
+				706519E827885E8700489194 /* HeroCVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +457,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7065199C278824C200489194 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7065199D278824C200489194 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		706519A1278824C300489194 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,7 +596,7 @@
 				INFOPLIST_FILE = MyDota/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -456,7 +608,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -472,7 +624,7 @@
 				INFOPLIST_FILE = MyDota/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -484,7 +636,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

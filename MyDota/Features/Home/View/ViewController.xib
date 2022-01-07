@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="MyDota" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionList" destination="QxC-zv-wlH" id="9pA-qu-GBp"/>
+                <outlet property="tableList" destination="ghV-5R-sxM" id="2pD-qd-zzi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ghV-5R-sxM">
+                    <rect key="frame" x="640" y="0.0" width="256" height="393"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="256" id="CFZ-MY-tPt"/>
+                    </constraints>
+                </tableView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="QxC-zv-wlH">
+                    <rect key="frame" x="44" y="0.0" width="588" height="393"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fWm-NF-hCl">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ghV-5R-sxM" secondAttribute="trailing" id="CaI-gQ-aoK"/>
+                <constraint firstItem="QxC-zv-wlH" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="N07-Hd-2wv"/>
+                <constraint firstItem="QxC-zv-wlH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NiH-Zq-9C6"/>
+                <constraint firstItem="QxC-zv-wlH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="esh-8h-K8h"/>
+                <constraint firstItem="ghV-5R-sxM" firstAttribute="leading" secondItem="QxC-zv-wlH" secondAttribute="trailing" constant="8" id="kW7-fI-Pc6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ghV-5R-sxM" secondAttribute="bottom" id="q9M-pD-WDE"/>
+                <constraint firstItem="ghV-5R-sxM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ua1-nz-82F"/>
+            </constraints>
+            <point key="canvasLocation" x="138.61607142857142" y="150.72463768115944"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
