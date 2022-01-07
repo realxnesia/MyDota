@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8N4-gH-oND">
-                        <rect key="frame" x="28" y="19" width="352" height="159"/>
+                        <rect key="frame" x="22" y="13" width="364" height="171"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="gray" title="Role"/>
                         <connections>
@@ -26,10 +26,10 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="8N4-gH-oND" secondAttribute="bottom" constant="8" id="O9I-Nh-RHT"/>
-                    <constraint firstItem="8N4-gH-oND" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="RPf-pR-VB7"/>
-                    <constraint firstItem="8N4-gH-oND" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="daG-09-w7B"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="8N4-gH-oND" secondAttribute="trailing" constant="8" id="rTd-lg-bI2"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="8N4-gH-oND" secondAttribute="bottom" constant="2" id="O9I-Nh-RHT"/>
+                    <constraint firstItem="8N4-gH-oND" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="RPf-pR-VB7"/>
+                    <constraint firstItem="8N4-gH-oND" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="daG-09-w7B"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="8N4-gH-oND" secondAttribute="trailing" constant="2" id="rTd-lg-bI2"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

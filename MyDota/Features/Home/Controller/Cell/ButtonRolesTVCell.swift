@@ -7,11 +7,17 @@
 
 import UIKit
 
+
+protocol MyTableViewCellDelegate: AnyObject{
+    func roleButtonTapped(with title: String)
+}
+
 class ButtonRolesTVCell: UITableViewCell {
-    @IBOutlet weak var roleButton: UIButton!
     
-    var roles = [String]()
-    let slice = ["Pusher"]
+    weak var delegate: MyTableViewCellDelegate?
+    private var title: String = ""
+    
+    @IBOutlet weak var roleButton: UIButton!
     
     static let identifier = "ButtonRolesTVCell"
     static func nib() -> UINib{
@@ -20,7 +26,7 @@ class ButtonRolesTVCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,41 +35,16 @@ class ButtonRolesTVCell: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBAction func roleButtonTapped(_ sender: UIButton) {
+        delegate?.roleButtonTapped(with: title)
     }
 }
 
 extension ButtonRolesTVCell{
-    public func configureData(with model: GeneralData){
-        roles.append(model.role)
-        if !(roles.contains(model.role)){
-            roles.append(model.role)
-        }
-        
-        for name in roles{
-            roleButton.setTitle(name, for: .normal)
-        }
-        
-        //MARK: - BUAT MODEL DATA YANG UDAH DI SARING DAN DIKELOMPOKAN
-        
-
-//        let slicer = Array(Set(slice).intersection(roles))
-//        print(slicer)
-//        for name in slicer{
-//            roleButton.setTitle(name, for: .normal)
-//        }
-        
-        
-//        print("++++")
-//        var array1 = ["ad", "bd", "cd", "dd", "ed"]
-//        var array2 = ["ad", "cd", "dd", "fd"]
-//        array2 = Array(Set(array2).intersection(array1))
-//        print(array2)
-        
+    public func configureData(with title: String){
+        self.title = title
+        self.roleButton.setTitle(title, for: .normal)
     }
     
-    public func configure(){
-        
-    }
 }
 
 extension RangeReplaceableCollection where Element: Equatable {

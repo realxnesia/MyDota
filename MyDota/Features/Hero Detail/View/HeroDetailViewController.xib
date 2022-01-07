@@ -10,6 +10,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeroDetailViewController" customModule="MyDota" customModuleProvider="target">
             <connections>
+                <outlet property="attackLabel" destination="iGS-cl-A87" id="8ad-q1-par"/>
+                <outlet property="defendLabel" destination="NCp-O9-WnL" id="dbJ-fV-3ja"/>
+                <outlet property="heroImageView" destination="03K-Q3-9N2" id="Z8e-ec-1XH"/>
+                <outlet property="heroNameLabel" destination="Nh5-d2-L0m" id="htb-gP-MHL"/>
+                <outlet property="heroRole" destination="b1q-OQ-Gpa" id="1CW-Gu-5GJ"/>
+                <outlet property="hpLabel" destination="W4D-nH-iDh" id="tZp-AG-99G"/>
+                <outlet property="regenlabel" destination="rp9-bI-TYG" id="T5e-5e-ydp"/>
+                <outlet property="speedLabel" destination="y86-V6-fvf" id="DoN-3H-CUQ"/>
+                <outlet property="suggestHeroImageView1" destination="WBH-2U-FVE" id="zcp-EJ-YAe"/>
+                <outlet property="suggestHeroImageView2" destination="BMc-hv-C0a" id="5gV-kV-d9Q"/>
+                <outlet property="suggestHeroImageView3" destination="fCM-zi-tbh" id="mhX-bD-c9n"/>
+                <outlet property="typeLabel" destination="jee-u5-Aoa" id="UwS-PG-nvL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -97,7 +109,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4D-nH-iDh" userLabel="HP Label">
-                    <rect key="frame" x="700" y="28" width="20" height="21"/>
+                    <rect key="frame" x="700" y="28" width="144" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -110,7 +122,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="heal/regen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rp9-bI-TYG" userLabel="Heal Label">
-                    <rect key="frame" x="700" y="101" width="81" height="21"/>
+                    <rect key="frame" x="700" y="101" width="144" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -123,7 +135,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jee-u5-Aoa" userLabel="Type Label">
-                    <rect key="frame" x="700" y="174" width="34" height="21"/>
+                    <rect key="frame" x="700" y="174" width="144" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -169,6 +181,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="WBH-2U-FVE" secondAttribute="bottom" constant="8" id="GHS-Pb-4dc"/>
                 <constraint firstItem="xkV-1r-N7Q" firstAttribute="leading" secondItem="03K-Q3-9N2" secondAttribute="trailing" constant="256" id="GOg-bx-5sh"/>
                 <constraint firstItem="4lS-vl-v7B" firstAttribute="top" secondItem="xkV-1r-N7Q" secondAttribute="bottom" constant="8" id="GbL-Wj-ZmU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="W4D-nH-iDh" secondAttribute="trailing" constant="8" id="HQO-rJ-6ML"/>
                 <constraint firstItem="W4D-nH-iDh" firstAttribute="leading" secondItem="qm0-2g-fso" secondAttribute="trailing" constant="8" id="IyB-6d-war"/>
                 <constraint firstItem="i0I-lf-nPo" firstAttribute="leading" secondItem="03K-Q3-9N2" secondAttribute="trailing" constant="256" id="Jnq-gD-zQQ"/>
                 <constraint firstItem="03K-Q3-9N2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="KtF-RL-YDI"/>
@@ -187,8 +200,10 @@
                 <constraint firstItem="jee-u5-Aoa" firstAttribute="top" secondItem="rp9-bI-TYG" secondAttribute="bottom" constant="52" id="c9o-VM-kP4"/>
                 <constraint firstItem="xkV-1r-N7Q" firstAttribute="top" secondItem="i0I-lf-nPo" secondAttribute="bottom" constant="8" id="cyC-8b-FUN"/>
                 <constraint firstItem="0sK-SJ-SDr" firstAttribute="top" secondItem="Nh5-d2-L0m" secondAttribute="bottom" constant="2" id="dk9-97-C3J"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rp9-bI-TYG" secondAttribute="trailing" constant="8" id="dpI-Z4-EcB"/>
                 <constraint firstItem="4lS-vl-v7B" firstAttribute="leading" secondItem="mpt-P0-2vN" secondAttribute="trailing" constant="320" id="ege-05-EWi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fCM-zi-tbh" secondAttribute="bottom" constant="8" id="fFk-mu-AT6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jee-u5-Aoa" secondAttribute="trailing" constant="8" id="gkP-fI-rMb"/>
                 <constraint firstItem="i0I-lf-nPo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="kh8-11-VEC"/>
                 <constraint firstItem="ekF-PX-hBG" firstAttribute="top" secondItem="qm0-2g-fso" secondAttribute="bottom" constant="8" id="l8r-Nn-d0r"/>
                 <constraint firstItem="WBH-2U-FVE" firstAttribute="leading" secondItem="ZWB-2y-zhS" secondAttribute="trailing" constant="8" id="lKn-5f-3CI"/>

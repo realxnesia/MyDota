@@ -26,6 +26,9 @@
 		706519E927885E8700489194 /* HeroCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706519E727885E8700489194 /* HeroCVCell.xib */; };
 		706519F12788659A00489194 /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519EF2788659A00489194 /* HeroDetailViewController.swift */; };
 		706519F22788659A00489194 /* HeroDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706519F02788659A00489194 /* HeroDetailViewController.xib */; };
+		706519F42788825E00489194 /* ModelDetailHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519F32788825E00489194 /* ModelDetailHero.swift */; };
+		706519F82788924500489194 /* AltButtonRolesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519F62788924500489194 /* AltButtonRolesTVCell.swift */; };
+		706519F92788924500489194 /* AltButtonRolesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706519F72788924500489194 /* AltButtonRolesTVCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		706519E727885E8700489194 /* HeroCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCVCell.xib; sourceTree = "<group>"; };
 		706519EF2788659A00489194 /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
 		706519F02788659A00489194 /* HeroDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroDetailViewController.xib; sourceTree = "<group>"; };
+		706519F32788825E00489194 /* ModelDetailHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDetailHero.swift; sourceTree = "<group>"; };
+		706519F62788924500489194 /* AltButtonRolesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltButtonRolesTVCell.swift; sourceTree = "<group>"; };
+		706519F72788924500489194 /* AltButtonRolesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AltButtonRolesTVCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +192,7 @@
 			children = (
 				706519E22788324100489194 /* LocalData.swift */,
 				706519E42788351F00489194 /* ConstantData.swift */,
+				706519F32788825E00489194 /* ModelDetailHero.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -229,6 +236,7 @@
 		706519D727882BC500489194 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				706519F62788924500489194 /* AltButtonRolesTVCell.swift */,
 				706519D927882C0E00489194 /* ButtonRolesTVCell.swift */,
 				706519E627885E8700489194 /* HeroCVCell.swift */,
 			);
@@ -238,6 +246,7 @@
 		706519D827882BD000489194 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				706519F72788924500489194 /* AltButtonRolesTVCell.xib */,
 				706519DA27882C0E00489194 /* ButtonRolesTVCell.xib */,
 				706519E727885E8700489194 /* HeroCVCell.xib */,
 			);
@@ -383,6 +392,7 @@
 			files = (
 				706519E927885E8700489194 /* HeroCVCell.xib in Resources */,
 				706519A3278824C300489194 /* LaunchScreen.storyboard in Resources */,
+				706519F92788924500489194 /* AltButtonRolesTVCell.xib in Resources */,
 				706519DC27882C0E00489194 /* ButtonRolesTVCell.xib in Resources */,
 				706519F22788659A00489194 /* HeroDetailViewController.xib in Resources */,
 				706519D62788293100489194 /* ViewController.xib in Resources */,
@@ -411,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				706519F42788825E00489194 /* ModelDetailHero.swift in Sources */,
 				706519DB27882C0E00489194 /* ButtonRolesTVCell.swift in Sources */,
 				706519F12788659A00489194 /* HeroDetailViewController.swift in Sources */,
 				706519E52788351F00489194 /* ConstantData.swift in Sources */,
@@ -419,6 +430,7 @@
 				706519D52788293100489194 /* ViewController.swift in Sources */,
 				706519E12788310D00489194 /* ModelHome.swift in Sources */,
 				70651999278824C200489194 /* SceneDelegate.swift in Sources */,
+				706519F82788924500489194 /* AltButtonRolesTVCell.swift in Sources */,
 				706519E32788324100489194 /* LocalData.swift in Sources */,
 				706519E827885E8700489194 /* HeroCVCell.swift in Sources */,
 			);
