@@ -26,7 +26,7 @@ struct ModelDetailHeroElement: Codable {
     let turnRate: Double?
     let cmEnabled: Bool
     let legs, heroID, turboPicks, turboWINS: Int
-    let proBan: Int
+    let proBan: Int?
     let proWin, proPick: Int?
     let the1_Pick, the1_Win, the2_Pick, the2_Win: Int
     let the3_Pick, the3_Win, the4_Pick, the4_Win: Int

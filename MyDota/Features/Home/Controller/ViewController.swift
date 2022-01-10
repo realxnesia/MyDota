@@ -13,9 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableList: UITableView!
     @IBOutlet weak var collectionList: UICollectionView!
     
+    
     //MARK: - Dummy Here
     let fullDetailHero = localData.intializeData()
     let roles = ["Carry", "Disabler", "Durable", "Escape", "Initiator", "Jungler", "Nuker", "Pusher", "Support", "All Hero"]
+    var heroesFiltered = [String]()
+    var homeTitle: String?
+    private var models: [Codable] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +29,7 @@ class ViewController: UIViewController {
         collectionList.dataSource = self
         configureView()
         configureCell()
+        print(heroesFiltered.count)
     }
     
     func configureCell(){
@@ -34,9 +39,11 @@ class ViewController: UIViewController {
     }
     
     func configureView(){
-        self.navigationItem.title = "All Hero" 
+        let unwrapTitle = homeTitle ?? "All Hero"
+        self.navigationItem.title = unwrapTitle
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
-    
+        
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
@@ -49,10 +56,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: ButtonRolesTVCell.identifier, for: indexPath) as! ButtonRolesTVCell
         cell.configureData(with: roles[indexPath.row])
         cell.delegate = self
+        cell.navDelegate = self
+        
+//        cell.navTitleDelegate = self
         return cell
-        
-        
-        
     }
     
     
@@ -64,18 +71,25 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return fullDetailHero.count
+        //return fullDetailHero.count
+        
+        //Return jumlah data yg disimpan
+        return heroesFiltered.count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let heroCell = collectionView.dequeueReusableCell(withReuseIdentifier: HeroCVCell.identifier, for: indexPath) as! HeroCVCell
-        heroCell.configureData(with: fullDetailHero[indexPath.row])
+        //heroCell.configureData(with: fullDetailHero[indexPath.row])
+        heroCell.heroNameLabel.text = heroesFiltered[indexPath.row]
+        
+        //parsing data dan di load
         return heroCell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = HeroDetailViewController()
-        vc.nameTemp = fullDetailHero[indexPath.row].name
+         vc.nameTemp = fullDetailHero[indexPath.row].name
         vc.roleTemp = fullDetailHero[indexPath.row].role
         vc.attackTemp = fullDetailHero[indexPath.row].attack
         vc.defendTemp = fullDetailHero[indexPath.row].defend
@@ -92,7 +106,12 @@ extension ViewController: MyTableViewCellDelegate{
     func roleButtonTapped(with title: String) {
         navigationItem.title = title
     }
-    
-    
 }
+
+extension ViewController: NavigationDelegate{
+    func navigationToMainVC(vc: UIViewController) {
+        navigationController?.pushViewController(vc, animated: false)
+    }
+}
+
 
