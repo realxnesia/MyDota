@@ -10,18 +10,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeroDetailViewController" customModule="MyDota" customModuleProvider="target">
             <connections>
+                <outlet property="Label" destination="jee-u5-Aoa" id="UwS-PG-nvL"/>
+                <outlet property="armorLabel" destination="NCp-O9-WnL" id="dbJ-fV-3ja"/>
                 <outlet property="attackLabel" destination="iGS-cl-A87" id="8ad-q1-par"/>
-                <outlet property="defendLabel" destination="NCp-O9-WnL" id="dbJ-fV-3ja"/>
                 <outlet property="heroImageView" destination="03K-Q3-9N2" id="Z8e-ec-1XH"/>
                 <outlet property="heroNameLabel" destination="Nh5-d2-L0m" id="htb-gP-MHL"/>
-                <outlet property="heroRole" destination="b1q-OQ-Gpa" id="1CW-Gu-5GJ"/>
                 <outlet property="hpLabel" destination="W4D-nH-iDh" id="tZp-AG-99G"/>
-                <outlet property="regenlabel" destination="rp9-bI-TYG" id="T5e-5e-ydp"/>
+                <outlet property="manaLabel" destination="rp9-bI-TYG" id="T5e-5e-ydp"/>
+                <outlet property="roleLabel" destination="b1q-OQ-Gpa" id="1CW-Gu-5GJ"/>
                 <outlet property="speedLabel" destination="y86-V6-fvf" id="DoN-3H-CUQ"/>
                 <outlet property="suggestHeroImageView1" destination="WBH-2U-FVE" id="zcp-EJ-YAe"/>
                 <outlet property="suggestHeroImageView2" destination="BMc-hv-C0a" id="5gV-kV-d9Q"/>
                 <outlet property="suggestHeroImageView3" destination="fCM-zi-tbh" id="mhX-bD-c9n"/>
-                <outlet property="typeLabel" destination="jee-u5-Aoa" id="UwS-PG-nvL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -70,7 +70,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZZk-wd-gzV" userLabel="Stack View Stat Left">
-                    <rect key="frame" x="446" y="8" width="125.5" height="208"/>
+                    <rect key="frame" x="484.5" y="8" width="125.5" height="208"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MAA-M0-unv" userLabel="Stack View Photo L">
                             <rect key="frame" x="0.0" y="0.0" width="64" height="208"/>
@@ -101,7 +101,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="nf2-VM-blF" userLabel="Stack View Label L">
                             <rect key="frame" x="72" y="21.5" width="53.5" height="165.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="attack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGS-cl-A87" userLabel="Attack Label">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGS-cl-A87" userLabel="Attack Label">
                                     <rect key="frame" x="0.0" y="0.0" width="53.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -124,7 +124,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="v1c-cK-8wM" userLabel="Stack View Stat Right">
-                    <rect key="frame" x="635.5" y="8" width="152.5" height="208"/>
+                    <rect key="frame" x="674" y="8" width="114" height="208"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jcx-2N-RFG" userLabel="Stack View Photo L">
                             <rect key="frame" x="0.0" y="0.0" width="64" height="208"/>
@@ -153,22 +153,22 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="Qsa-dd-2P6" userLabel="Stack View Label L">
-                            <rect key="frame" x="72" y="21.5" width="80.5" height="165.5"/>
+                            <rect key="frame" x="72" y="21.5" width="42" height="165.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4D-nH-iDh" userLabel="HP Label">
-                                    <rect key="frame" x="0.0" y="0.0" width="80.5" height="20.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="heal/regen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rp9-bI-TYG" userLabel="Heal Label">
-                                    <rect key="frame" x="0.0" y="72.5" width="80.5" height="20.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rp9-bI-TYG" userLabel="Heal Label">
+                                    <rect key="frame" x="0.0" y="72.5" width="42" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jee-u5-Aoa" userLabel="Type Label">
-                                    <rect key="frame" x="0.0" y="145" width="80.5" height="20.5"/>
+                                    <rect key="frame" x="0.0" y="145" width="42" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>

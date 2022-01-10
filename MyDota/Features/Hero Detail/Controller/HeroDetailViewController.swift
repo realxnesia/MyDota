@@ -10,14 +10,22 @@ import UIKit
 class HeroDetailViewController: UIViewController {
 
     //MARK: - Data Temp
-    var nameTemp: String?
-    var roleTemp: String?
-    var attackTemp: String?
-    var defendTemp: String?
-    var speedTemp: String?
-    var hpTemp: String?
-    var regenTemp: String?
-    var typeTemp: String?
+    var heroName: String?
+    var heroRoles: [String] = []
+    var baseAttackMin: Int = 0
+    var baseAttackMax: Int = 0
+    var baseArmor: Double?
+    var moveSpeed: Int = 0
+    var baseHealth: Int = 0
+    var baseMana: Int = 0
+    var atributeType: String?
+    
+    var x = ["a", "b", "c"]
+    
+    
+    var currentIndexHero: Int = 0
+    var heroes = [String]()
+    private var models: [Codable] = []
     
     @IBOutlet weak var heroImageView: UIImageView!
     
@@ -26,36 +34,29 @@ class HeroDetailViewController: UIViewController {
     @IBOutlet weak var suggestHeroImageView3: UIImageView!
     
     @IBOutlet weak var heroNameLabel: UILabel!
-    @IBOutlet weak var heroRole: UILabel!
+    @IBOutlet weak var roleLabel: UILabel!
     
     
     @IBOutlet weak var attackLabel: UILabel!
-    @IBOutlet weak var defendLabel: UILabel!
+    @IBOutlet weak var armorLabel: UILabel!
     @IBOutlet weak var speedLabel: UILabel!
     
     @IBOutlet weak var hpLabel: UILabel!
-    @IBOutlet weak var regenlabel: UILabel!
-    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var manaLabel: UILabel!
+    @IBOutlet weak var Label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView()
-        
+        //configureView()
+        heroNameLabel.text = heroName
+        roleLabel.text = heroRoles.joined(separator: ",")
+  
+        attackLabel.text = "\(baseAttackMin) - \(baseAttackMax)"
+        armorLabel.text = String(format: "%.2f", baseArmor!)
+        speedLabel.text = String(moveSpeed)
+
+        hpLabel.text = String(baseHealth)
+        manaLabel.text = String(baseMana)
+        Label.text = atributeType
     }
-    
-    private func configureView(){
-        self.heroNameLabel.text = nameTemp
-        self.heroRole.text = roleTemp
-        
-        self.attackLabel.text = attackTemp
-        self.defendLabel.text = defendTemp
-        self.speedLabel.text = speedTemp
-        self.hpLabel.text = hpTemp
-        self.regenlabel.text = regenTemp
-        self.speedLabel.text = speedTemp
-        self.typeLabel.text = typeTemp
-    }
-
-
-
 }

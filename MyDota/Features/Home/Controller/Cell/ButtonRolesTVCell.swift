@@ -9,7 +9,7 @@ import UIKit
 //import XCTest
 
 
-protocol MyTableViewCellDelegate: AnyObject{
+protocol titleLabelDelegate: AnyObject{
     func roleButtonTapped(with title: String)
 }
 
@@ -23,12 +23,22 @@ protocol NavigationDelegate{
 
 class ButtonRolesTVCell: UITableViewCell {
     
-    weak var delegate: MyTableViewCellDelegate?
+    weak var delegate: titleLabelDelegate?
     var navDelegate: NavigationDelegate?
     //var navTitleDelegate: NavigationDelegateWTitle?
     private var title: String = ""
     private var models: [Codable] = []
-    var tempFilter = [String]()
+    var tempHeroName = [String]()
+    var tempHeroImage: String?
+    
+    var tempRole = [String]()
+    var baseAttackMin = [Int]()
+    var baseAttackMax = [Int]()
+    var baseArmor = [Double]()
+    var moveSpeed = [Int]()
+    var baseHealth = [Int]()
+    var baseMana = [Int]()
+    var atribute = [String]()
     
     @IBOutlet weak var roleButton: UIButton!
     
@@ -100,14 +110,39 @@ extension ButtonRolesTVCell{
                 ////https://stackoverflow.com/questions/44609216/dictionaries-string-string-in-swift
                 let filtered = item.filter{ $0.roles.contains(identifierRoles) }
                 for hero in 0..<filtered.count{
-                    self.tempFilter.insert(filtered[hero].localizedName, at: 0)
-                }
-                
+                    self.tempHeroName.insert(filtered[hero].localizedName, at: 0)
+                    self.tempHeroImage = filtered[hero].img
+                    
+                    for addRole in 0..<filtered[hero].roles.count{
+                        self.tempRole.insert(filtered[hero].roles[addRole].rawValue, at: 0)
+                    }
 
-                DispatchQueue.main.async {
+                    self.baseAttackMin.insert(filtered[hero].baseAttackMin, at: 0)
+                    self.baseAttackMax.insert(filtered[hero].baseAttackMax, at: 0)
+                    self.baseArmor.insert(filtered[hero].baseArmor, at: 0)
+                    self.moveSpeed.insert(filtered[hero].moveSpeed, at: 0)
+                    
+                    self.baseHealth.insert(filtered[hero].baseHealth, at: 0)
+                    self.baseMana.insert(filtered[hero].baseMana, at: 0)
+                    self.atribute.insert(filtered[hero].primaryAttr.rawValue, at: 0)
+                }
+        
+
+                DispatchQueue.main.async { [self] in
                     let vc = ViewController()
-                    vc.heroesFiltered = self.tempFilter
+                    vc.heroesFiltered = self.tempHeroName
                     vc.homeTitle = self.title
+                    vc.heroesImage = self.tempHeroImage
+                    vc.tempRole = self.tempRole
+                    
+                    vc.tempBaseAttackMin = self.baseAttackMin
+                    vc.tempBaseAttackMax = self.baseAttackMax
+                    vc.tempBaseArmor = self.baseArmor
+                    vc.tempMoveSpeed = self.moveSpeed
+                    vc.tempBaseHealth = self.baseHealth
+                    vc.tempBaseMana = self.baseMana
+                    vc.tempAtribute = self.atribute
+                    
                     self.navDelegate?.navigationToMainVC(vc: vc)
 
                 }
@@ -124,14 +159,32 @@ extension ButtonRolesTVCell{
             case .success(let item):
                 self.models = item
                 for hero in 0..<item.count{
-                    self.tempFilter.insert(item[hero].localizedName, at: 0)
+                    self.tempHeroName.insert(item[hero].localizedName, at: 0)
+                    
+                    self.baseAttackMin.insert(item[hero].baseAttackMin, at: 0)
+                    self.baseAttackMax.insert(item[hero].baseAttackMax, at: 0)
+                    self.baseArmor.insert(item[hero].baseArmor, at: 0)
+                    self.moveSpeed.insert(item[hero].moveSpeed, at: 0)
+                    
+                    self.baseHealth.insert(item[hero].baseHealth, at: 0)
+                    self.baseMana.insert(item[hero].baseMana, at: 0)
+                    self.atribute.insert(item[hero].primaryAttr.rawValue, at: 0)
                 }
                 print(item)
 
                 DispatchQueue.main.async {
                     let vc = ViewController()
-                    vc.heroesFiltered = self.tempFilter
+                    vc.heroesFiltered = self.tempHeroName
                     vc.homeTitle = self.title
+                    vc.heroesImage = self.tempHeroImage
+                    
+                    vc.tempBaseAttackMin = self.baseAttackMin
+                    vc.tempBaseAttackMax = self.baseAttackMax
+                    vc.tempBaseArmor = self.baseArmor
+                    vc.tempMoveSpeed = self.moveSpeed
+                    vc.tempBaseHealth = self.baseHealth
+                    vc.tempBaseMana = self.baseMana
+                    vc.tempAtribute = self.atribute
                     self.navDelegate?.navigationToMainVC(vc: vc)
                 }
             case .failure(let error):
