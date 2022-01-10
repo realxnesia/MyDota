@@ -11,6 +11,7 @@ class HeroDetailViewController: UIViewController {
 
     //MARK: - Data Temp
     var heroName: String?
+    var heroImage: String = ""
     var heroRoles: [String] = []
     var baseAttackMin: Int = 0
     var baseAttackMax: Int = 0
@@ -44,16 +45,7 @@ class HeroDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        heroNameLabel.text = heroName
-        roleLabel.text = heroRoles.joined(separator: ",")
-  
-        attackLabel.text = "\(baseAttackMin) - \(baseAttackMax)"
-        armorLabel.text = String(format: "%.2f", baseArmor!)
-        speedLabel.text = String(moveSpeed)
-
-        hpLabel.text = String(baseHealth)
-        manaLabel.text = String(baseMana)
-        Label.text = atributeType
+        configureView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,4 +57,22 @@ class HeroDetailViewController: UIViewController {
        super.viewWillDisappear(animated)
        AppUtility.lockOrientation(.all)
    }
+    
+}
+
+extension HeroDetailViewController{
+    func configureView(){
+        heroNameLabel.text = heroName
+        if let urlImage = URL(string: APIConstant.BASE_URL + heroImage){
+            heroImageView.load(url: urlImage)
+        }
+        //heroImageView.load(url: APIConstant.BASE_URL + heroImage)
+        roleLabel.text = heroRoles.joined(separator: ",")
+        attackLabel.text = "\(baseAttackMin) - \(baseAttackMax)"
+        armorLabel.text = String(format: "%.2f", baseArmor!)
+        speedLabel.text = String(moveSpeed)
+        hpLabel.text = String(baseHealth)
+        manaLabel.text = String(baseMana)
+        Label.text = atributeType
+    }
 }

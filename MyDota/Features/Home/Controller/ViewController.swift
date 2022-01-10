@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     let fullDetailHero = localData.intializeData() //Dummy hero -> tidak digunakan lagi
     let roles = ["Carry", "Disabler", "Durable", "Escape", "Initiator", "Jungler", "Nuker", "Pusher", "Support", "All Hero"]
     var heroesFiltered = [String]()
-    var heroesImage: String?
+    var tempHeroesImage = [String]()
     var homeTitle: String?
     private var models: [Codable] = []
     
@@ -82,7 +82,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableList.deselectRow(at: indexPath, animated: true)
             
@@ -93,13 +92,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 //MARK: Collection view Heroes
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return heroesFiltered.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let heroCell = collectionView.dequeueReusableCell(withReuseIdentifier: HeroCVCell.identifier, for: indexPath) as! HeroCVCell
-        
+
+        if let url = URL(string: APIConstant.BASE_URL + tempHeroesImage[indexPath.row]){
+            heroCell.heroImageView.load(url: url)
+        }
         heroCell.heroNameLabel.text = heroesFiltered[indexPath.row]
         
         return heroCell
@@ -110,6 +111,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         //MARK: Send Data to HeroDetailViewController()
         vc.heroName = heroesFiltered[indexPath.row]
         vc.heroRoles = [tempRole[indexPath.row]]
+        vc.heroImage = tempHeroesImage[indexPath.row]
         
         vc.baseAttackMin = tempBaseAttackMin[indexPath.row]
         vc.baseAttackMax = tempBaseAttackMax[indexPath.row]

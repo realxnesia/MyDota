@@ -8,7 +8,9 @@
 import Foundation
 
 class APIConstant: NSObject{
-    static let BASE_URL = URL(string: "https://api.opendota.com/api/herostats")
-    static let BASE_IMAGE_URL = URL(string: "https://cdn.cloudflare.steamstatic.com")
+//    static let BASE_URL = URL(string: "https://api.opendota.com")
+//    static let HERO_STATS_URL = URL(string: "/api/herostats")
     
+    static let BASE_URL = "https://api.opendota.com"
+    static let HERO_STATS_URL = "/api/herostats"    
 }

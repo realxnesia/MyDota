@@ -17,19 +17,14 @@ protocol NavigationDelegate{
     func navigationToMainVC(vc: UIViewController)
 }
 
-//protocol NavigationDelegateWTitle: AnyObject{
-//    func navigationVC(with title: String, vc: UIViewController)
-//}
-
 class ButtonRolesTVCell: UITableViewCell {
     
     weak var delegate: titleLabelDelegate?
     var navDelegate: NavigationDelegate?
-    //var navTitleDelegate: NavigationDelegateWTitle?
     private var title: String = ""
     private var models: [Codable] = []
-    var tempHeroName = [String]()
-    var tempHeroImage: String?
+    var heroName = [String]()
+    var heroImages = [String]()
     
     var role = [String]()
     var baseAttackMin = [Int]()
@@ -49,7 +44,6 @@ class ButtonRolesTVCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //fetchAllHeroes()
 
     }
 
@@ -61,9 +55,7 @@ class ButtonRolesTVCell: UITableViewCell {
     
     @IBAction func roleButtonTapped(_ sender: UIButton) {
         delegate?.roleButtonTapped(with: title)
-
         configureButton()
-
     }
 }
 
@@ -101,7 +93,7 @@ extension ButtonRolesTVCell{
     
     //MARK: - Fetch Hero Based on Role
     func fetchSelectedRole(with identifierRoles: Role){
-        URLSession.shared.request(url: APIConstant.BASE_URL, expecting: ModelDetailHero.self) { result in
+        URLSession.shared.request(url: URL(string: APIConstant.BASE_URL + APIConstant.HERO_STATS_URL), expecting: ModelDetailHero.self) { result in
             switch result{
             case .success(let item):
                 self.models = item
@@ -110,8 +102,8 @@ extension ButtonRolesTVCell{
                 ////https://stackoverflow.com/questions/44609216/dictionaries-string-string-in-swift
                 let filtered = item.filter{ $0.roles.contains(identifierRoles) }
                 for hero in 0..<filtered.count{
-                    self.tempHeroName.insert(filtered[hero].localizedName, at: 0)
-                    self.tempHeroImage = filtered[hero].img
+                    self.heroName.insert(filtered[hero].localizedName, at: 0)
+                    self.heroImages.insert(filtered[hero].img, at: 0)
                     
                     for addRole in 0..<filtered[hero].roles.count{
                         self.role.insert(filtered[hero].roles[addRole].rawValue, at: 0)
@@ -129,9 +121,9 @@ extension ButtonRolesTVCell{
 
                 DispatchQueue.main.async { [self] in
                     let vc = ViewController()
-                    vc.heroesFiltered = self.tempHeroName
+                    vc.heroesFiltered = self.heroName
                     vc.homeTitle = self.title
-                    vc.heroesImage = self.tempHeroImage
+                    vc.tempHeroesImage = self.heroImages
                     vc.tempRole = self.role
                     
                     vc.tempBaseAttackMin = self.baseAttackMin
@@ -153,12 +145,13 @@ extension ButtonRolesTVCell{
     
     //MARK: - Fetch All Heroes
     func fetchAllHeroes(){
-        URLSession.shared.request(url: APIConstant.BASE_URL, expecting: ModelDetailHero.self) { result in
+        URLSession.shared.request(url: URL(string: APIConstant.BASE_URL + APIConstant.HERO_STATS_URL), expecting: ModelDetailHero.self) { result in
             switch result{
             case .success(let item):
                 self.models = item
                 for hero in 0..<item.count{
-                    self.tempHeroName.insert(item[hero].localizedName, at: 0)
+                    self.heroName.insert(item[hero].localizedName, at: 0)
+                    self.heroImages.insert(item[hero].img, at: 0)
                     
                     for addRole in 0..<item[hero].roles.count{
                         self.role.insert(item[hero].roles[addRole].rawValue, at: 0)
@@ -176,9 +169,10 @@ extension ButtonRolesTVCell{
 
                 DispatchQueue.main.async {
                     let vc = ViewController()
-                    vc.heroesFiltered = self.tempHeroName
                     vc.homeTitle = self.title
-                    vc.heroesImage = self.tempHeroImage
+                    vc.heroesFiltered = self.heroName
+                    vc.tempHeroesImage = self.heroImages
+                    vc.tempHeroesImage = self.heroImages
                     vc.tempRole = self.role
                     vc.tempBaseAttackMin = self.baseAttackMin
                     vc.tempBaseAttackMax = self.baseAttackMax
