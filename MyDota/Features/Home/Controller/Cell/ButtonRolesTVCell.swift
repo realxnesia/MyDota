@@ -31,7 +31,7 @@ class ButtonRolesTVCell: UITableViewCell {
     var tempHeroName = [String]()
     var tempHeroImage: String?
     
-    var tempRole = [String]()
+    var role = [String]()
     var baseAttackMin = [Int]()
     var baseAttackMax = [Int]()
     var baseArmor = [Double]()
@@ -114,7 +114,7 @@ extension ButtonRolesTVCell{
                     self.tempHeroImage = filtered[hero].img
                     
                     for addRole in 0..<filtered[hero].roles.count{
-                        self.tempRole.insert(filtered[hero].roles[addRole].rawValue, at: 0)
+                        self.role.insert(filtered[hero].roles[addRole].rawValue, at: 0)
                     }
 
                     self.baseAttackMin.insert(filtered[hero].baseAttackMin, at: 0)
@@ -126,14 +126,13 @@ extension ButtonRolesTVCell{
                     self.baseMana.insert(filtered[hero].baseMana, at: 0)
                     self.atribute.insert(filtered[hero].primaryAttr.rawValue, at: 0)
                 }
-        
 
                 DispatchQueue.main.async { [self] in
                     let vc = ViewController()
                     vc.heroesFiltered = self.tempHeroName
                     vc.homeTitle = self.title
                     vc.heroesImage = self.tempHeroImage
-                    vc.tempRole = self.tempRole
+                    vc.tempRole = self.role
                     
                     vc.tempBaseAttackMin = self.baseAttackMin
                     vc.tempBaseAttackMax = self.baseAttackMax
@@ -161,11 +160,14 @@ extension ButtonRolesTVCell{
                 for hero in 0..<item.count{
                     self.tempHeroName.insert(item[hero].localizedName, at: 0)
                     
+                    for addRole in 0..<item[hero].roles.count{
+                        self.role.insert(item[hero].roles[addRole].rawValue, at: 0)
+                    }
+                            
                     self.baseAttackMin.insert(item[hero].baseAttackMin, at: 0)
                     self.baseAttackMax.insert(item[hero].baseAttackMax, at: 0)
                     self.baseArmor.insert(item[hero].baseArmor, at: 0)
                     self.moveSpeed.insert(item[hero].moveSpeed, at: 0)
-                    
                     self.baseHealth.insert(item[hero].baseHealth, at: 0)
                     self.baseMana.insert(item[hero].baseMana, at: 0)
                     self.atribute.insert(item[hero].primaryAttr.rawValue, at: 0)
@@ -177,7 +179,7 @@ extension ButtonRolesTVCell{
                     vc.heroesFiltered = self.tempHeroName
                     vc.homeTitle = self.title
                     vc.heroesImage = self.tempHeroImage
-                    
+                    vc.tempRole = self.role
                     vc.tempBaseAttackMin = self.baseAttackMin
                     vc.tempBaseAttackMax = self.baseAttackMax
                     vc.tempBaseArmor = self.baseArmor

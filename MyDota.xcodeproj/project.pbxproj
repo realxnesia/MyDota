@@ -21,7 +21,6 @@
 		706519DC27882C0E00489194 /* ButtonRolesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706519DA27882C0E00489194 /* ButtonRolesTVCell.xib */; };
 		706519E12788310D00489194 /* ModelHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519E02788310D00489194 /* ModelHome.swift */; };
 		706519E32788324100489194 /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519E22788324100489194 /* LocalData.swift */; };
-		706519E52788351F00489194 /* ConstantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519E42788351F00489194 /* ConstantData.swift */; };
 		706519E827885E8700489194 /* HeroCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519E627885E8700489194 /* HeroCVCell.swift */; };
 		706519E927885E8700489194 /* HeroCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706519E727885E8700489194 /* HeroCVCell.xib */; };
 		706519F12788659A00489194 /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519EF2788659A00489194 /* HeroDetailViewController.swift */; };
@@ -29,6 +28,7 @@
 		706519F42788825E00489194 /* ModelDetailHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519F32788825E00489194 /* ModelDetailHero.swift */; };
 		706519F82788924500489194 /* AltButtonRolesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519F62788924500489194 /* AltButtonRolesTVCell.swift */; };
 		706519F92788924500489194 /* AltButtonRolesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706519F72788924500489194 /* AltButtonRolesTVCell.xib */; };
+		707189A2278C481D00707E9D /* AppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707189A1278C481D00707E9D /* AppUtilities.swift */; };
 		7082DD45278934E500EE7455 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7082DD44278934E500EE7455 /* Base.swift */; };
 		7082DD492789385200EE7455 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7082DD482789385200EE7455 /* APIConstant.swift */; };
 /* End PBXBuildFile section */
@@ -69,7 +69,6 @@
 		706519DA27882C0E00489194 /* ButtonRolesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonRolesTVCell.xib; sourceTree = "<group>"; };
 		706519E02788310D00489194 /* ModelHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHome.swift; sourceTree = "<group>"; };
 		706519E22788324100489194 /* LocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
-		706519E42788351F00489194 /* ConstantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantData.swift; sourceTree = "<group>"; };
 		706519E627885E8700489194 /* HeroCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCVCell.swift; sourceTree = "<group>"; };
 		706519E727885E8700489194 /* HeroCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCVCell.xib; sourceTree = "<group>"; };
 		706519EF2788659A00489194 /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		706519F32788825E00489194 /* ModelDetailHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDetailHero.swift; sourceTree = "<group>"; };
 		706519F62788924500489194 /* AltButtonRolesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltButtonRolesTVCell.swift; sourceTree = "<group>"; };
 		706519F72788924500489194 /* AltButtonRolesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AltButtonRolesTVCell.xib; sourceTree = "<group>"; };
+		707189A1278C481D00707E9D /* AppUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtilities.swift; sourceTree = "<group>"; };
 		7082DD44278934E500EE7455 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		7082DD482789385200EE7455 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				706519C92788282200489194 /* AppColors.swift */,
+				707189A1278C481D00707E9D /* AppUtilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -204,7 +205,6 @@
 			children = (
 				7082DD462789381D00EE7455 /* Network */,
 				706519E22788324100489194 /* LocalData.swift */,
-				706519E42788351F00489194 /* ConstantData.swift */,
 				706519F32788825E00489194 /* ModelDetailHero.swift */,
 			);
 			path = Data;
@@ -462,10 +462,10 @@
 				706519F42788825E00489194 /* ModelDetailHero.swift in Sources */,
 				706519DB27882C0E00489194 /* ButtonRolesTVCell.swift in Sources */,
 				706519F12788659A00489194 /* HeroDetailViewController.swift in Sources */,
-				706519E52788351F00489194 /* ConstantData.swift in Sources */,
 				706519CA2788282200489194 /* AppColors.swift in Sources */,
 				7082DD45278934E500EE7455 /* Base.swift in Sources */,
 				70651997278824C200489194 /* AppDelegate.swift in Sources */,
+				707189A2278C481D00707E9D /* AppUtilities.swift in Sources */,
 				706519D52788293100489194 /* ViewController.swift in Sources */,
 				706519E12788310D00489194 /* ModelHome.swift in Sources */,
 				70651999278824C200489194 /* SceneDelegate.swift in Sources */,
@@ -648,9 +648,10 @@
 				INFOPLIST_FILE = MyDota/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -676,9 +677,10 @@
 				INFOPLIST_FILE = MyDota/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

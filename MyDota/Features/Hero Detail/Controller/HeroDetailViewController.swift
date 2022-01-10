@@ -20,9 +20,6 @@ class HeroDetailViewController: UIViewController {
     var baseMana: Int = 0
     var atributeType: String?
     
-    var x = ["a", "b", "c"]
-    
-    
     var currentIndexHero: Int = 0
     var heroes = [String]()
     private var models: [Codable] = []
@@ -47,7 +44,6 @@ class HeroDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //configureView()
         heroNameLabel.text = heroName
         roleLabel.text = heroRoles.joined(separator: ",")
   
@@ -59,4 +55,14 @@ class HeroDetailViewController: UIViewController {
         manaLabel.text = String(baseMana)
         Label.text = atributeType
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(animated)
+       AppUtility.lockOrientation(.landscape, andRotateTo: .landscapeRight)
+   }
+
+   override func viewWillDisappear(_ animated: Bool) {
+       super.viewWillDisappear(animated)
+       AppUtility.lockOrientation(.all)
+   }
 }

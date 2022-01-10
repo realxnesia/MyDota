@@ -42,6 +42,16 @@ class ViewController: UIViewController {
         configureCell()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(animated)
+       AppUtility.lockOrientation(.landscape, andRotateTo: .landscapeRight)
+   }
+
+   override func viewWillDisappear(_ animated: Bool) {
+       super.viewWillDisappear(animated)
+       AppUtility.lockOrientation(.all)
+   }
+    
     private func configureCell(){
         tableList.register(ButtonRolesTVCell.nib(), forCellReuseIdentifier: ButtonRolesTVCell.identifier)
         tableList.register(AltButtonRolesTVCell.nib(), forCellReuseIdentifier: AltButtonRolesTVCell.identifier)
