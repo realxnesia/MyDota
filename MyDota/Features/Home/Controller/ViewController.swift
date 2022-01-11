@@ -16,14 +16,14 @@ class ViewController: UIViewController {
     
 
     let fullDetailHero = localData.intializeData() //Dummy hero -> tidak digunakan lagi
+
+
+
+    //MARK: - Related to API Request from Button in Table View
     let roles = ["Carry", "Disabler", "Durable", "Escape", "Initiator", "Jungler", "Nuker", "Pusher", "Support", "All Hero"]
     var heroesFiltered = [String]()
     var tempHeroesImage = [String]()
-    var dataHeroFromSplash = [HeroesEntity]()
-    var dataRoleFromSplash = [RoleEntity]()
-    var homeTitle: String?
-    private var models: [Codable] = []
-    
+    var navTitle: String?
     
     var tempRole = [String]()
     var tempBaseAttackMin =  [Int]()
@@ -33,7 +33,13 @@ class ViewController: UIViewController {
     var tempBaseHealth = [Int]()
     var tempBaseMana = [Int]()
     var tempAtribute = [String]()
-
+    
+    //MARK: - Related to Core Data
+    let database = DatabaseHandler()
+    var dataHeroFromSplash = [HeroesEntity]()
+    var dataRoleFromSplash = [RoleEntity]()
+    var dataSavedFromCoreData = [HeroesEntity]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableList.delegate = self
@@ -42,7 +48,6 @@ class ViewController: UIViewController {
         collectionList.dataSource = self
         configureView()
         configureCell()
-        print(dataHeroFromSplash)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,7 +67,7 @@ class ViewController: UIViewController {
     }
     
     private func configureView(){
-        let unwrapTitle = homeTitle ?? "All Hero"
+        let unwrapTitle = navTitle ?? "All Hero"
         self.navigationItem.title = unwrapTitle
         self.navigationItem.setHidesBackButton(true, animated: true)
         self.tableList.separatorStyle = UITableViewCell.SeparatorStyle.none
@@ -86,17 +91,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        switch indexPath.row{
-//        case 0:
-//            return 64
-//        default:
-//            //return UITableView.automaticDimension
-//            return 64
-//
-//        }
-//    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableList.deselectRow(at: indexPath, animated: true)
     }
@@ -106,16 +100,33 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 //MARK: Collection view Heroes
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return heroesFiltered.count
+        //return heroesFiltered.count //MARK: ini udah bener
+        //dataHeroFromSplash.count
+        if heroesFiltered.count != 0{
+            //Get From API
+            return heroesFiltered.count
+        }else{
+            //Get From Core Data
+            return dataHeroFromSplash.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let heroCell = collectionView.dequeueReusableCell(withReuseIdentifier: HeroCVCell.identifier, for: indexPath) as! HeroCVCell
-
-        if let url = URL(string: APIConstant.BASE_URL + tempHeroesImage[indexPath.row]){
-            heroCell.heroImageView.load(url: url)
+        
+        if heroesFiltered.count != 0{
+            if let url = URL(string: APIConstant.BASE_URL + tempHeroesImage[indexPath.row]){
+                heroCell.heroImageView.load(url: url)
+            }
+            heroCell.heroNameLabel.text = heroesFiltered[indexPath.row]
+        }else{
+            //Fetch data from core data
+            self.dataSavedFromCoreData = self.database.fetch(HeroesEntity.self)
+            if let url = URL(string: APIConstant.BASE_URL + dataSavedFromCoreData[indexPath.row].img!){
+                heroCell.heroImageView.load(url: url)
+            }
+            heroCell.heroNameLabel.text = dataHeroFromSplash[indexPath.row].localizedName
         }
-        heroCell.heroNameLabel.text = heroesFiltered[indexPath.row]
         
         return heroCell
     }

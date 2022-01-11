@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 //import XCTest
 
 
@@ -35,6 +36,13 @@ class ButtonRolesTVCell: UITableViewCell {
     var baseMana = [Int]()
     var atribute = [String]()
     
+    //MARK: CoreData
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+    let database = DatabaseHandler()
+    var dataHeroFiltered = [HeroesEntity]()
+    var dataRoleFiltered = [RoleEntity]()
+    var dataHeroFiltered2 = [HeroesEntity]()
+    
     @IBOutlet weak var roleButton: UIButton!
     
     static let identifier = "ButtonRolesTVCell"
@@ -55,7 +63,7 @@ class ButtonRolesTVCell: UITableViewCell {
     
     @IBAction func roleButtonTapped(_ sender: UIButton) {
         delegate?.roleButtonTapped(with: title)
-        configureButton()
+        configureButton()        
     }
 }
 
@@ -122,7 +130,7 @@ extension ButtonRolesTVCell{
                 DispatchQueue.main.async { [self] in
                     let vc = ViewController()
                     vc.heroesFiltered = self.heroName
-                    vc.homeTitle = self.title
+                    vc.navTitle = self.title
                     vc.tempHeroesImage = self.heroImages
                     vc.tempRole = self.role
                     
@@ -169,7 +177,7 @@ extension ButtonRolesTVCell{
 
                 DispatchQueue.main.async {
                     let vc = ViewController()
-                    vc.homeTitle = self.title
+                    vc.navTitle = self.title
                     vc.heroesFiltered = self.heroName
                     vc.tempHeroesImage = self.heroImages
                     vc.tempHeroesImage = self.heroImages
@@ -189,6 +197,22 @@ extension ButtonRolesTVCell{
         }
     }
     
+    
+    //MARK: Fetch from Core Data
+    func fetchRole(with identifierRoles: String){
+        do{
+            let request2: NSFetchRequest<HeroesEntity> = HeroesEntity.fetchRequest()
+            //request2.predicate = NSPredicate(format: "roles CONTAINS %@", identifierRoles)
+            request2.predicate = NSPredicate(format: "ANY roles CONTAINS[c] %@", identifierRoles)
+
+            dataHeroFiltered = try context.viewContext.fetch(request2)
+            print(dataHeroFiltered)
+            print(dataHeroFiltered.count)
+        }catch{
+            print(error.localizedDescription)
+        }
+
+    }
 }
 
 extension RangeReplaceableCollection where Element: Equatable {

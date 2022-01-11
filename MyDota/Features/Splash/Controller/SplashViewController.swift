@@ -42,9 +42,8 @@ class SplashViewController: BaseVC {
             switch result{
             case .success(let list):
                 
-                //MARK: Save to CoreData
+                //MARK: Save to CoreData Manually
                 for data in 0..<list.count{
-                    
                     guard let heroModelEntity = self.database.add(HeroesEntity.self) else {return}
                     guard let roleModelEntity = self.database.add(RoleEntity.self) else {return}
                     heroModelEntity.id = Int16(list[data].id)
@@ -66,10 +65,8 @@ class SplashViewController: BaseVC {
                     heroModelEntity.moveSpeed = Int32(list[data].moveSpeed)
                     
                     for dataRole in 0..<list[data].roles.count{
-                        //Add role heroModelEntity
-                        heroModelEntity.roles = list[data].roles[dataRole].rawValue
-                        //Add role from heroModelEntity to roleModelEntity
-                        heroModelEntity.addToRole(roleModelEntity)
+                        heroModelEntity.roles = list[data].roles[dataRole].rawValue //Add role heroModelEntity
+                        heroModelEntity.addToRole(roleModelEntity) //Add role from heroModelEntity to roleModelEntity
                         self.temDataRolesEntity.append(roleModelEntity)
                     }
                     
@@ -81,7 +78,7 @@ class SplashViewController: BaseVC {
                 vc.dataHeroFromSplash = self.tempDataHeroesEntity
                 vc.dataRoleFromSplash = self.temDataRolesEntity
                 self.navigationController?.pushViewController(vc, animated: true)
-                //CoreData.sharedInstance.saveDataOf(heroes: ModelDetailHeroes2)
+                //CoreData.sharedInstance.saveDataOf(heroes: ModelDetailHeroes2) 
        
             case .failure(let error):
                 //show alert
