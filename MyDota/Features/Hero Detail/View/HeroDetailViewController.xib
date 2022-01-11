@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -31,12 +31,27 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="03K-Q3-9N2" userLabel="Hero ImageView">
-                    <rect key="frame" x="52" y="9.5" width="128" height="125"/>
+                    <rect key="frame" x="52" y="9.5" width="256" height="177"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="128" id="gKm-L2-MEI"/>
-                        <constraint firstAttribute="width" constant="128" id="ryv-Sa-q3l"/>
+                        <constraint firstAttribute="height" constant="180" id="gKm-L2-MEI"/>
+                        <constraint firstAttribute="width" constant="256" id="ryv-Sa-q3l"/>
                     </constraints>
                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="shadowOffset" value="CGSizeMake(5.0, 5.0)"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fZd-rS-MT8" userLabel="Stack View Similar Hero">
                     <rect key="frame" x="52" y="321" width="314.5" height="64"/>
@@ -49,6 +64,7 @@
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="WBH-2U-FVE" userLabel="SuggestHero1 ImageView">
                             <rect key="frame" x="106.5" y="1.5" width="64" height="61"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="64" id="X3d-7a-m2u"/>
                                 <constraint firstAttribute="width" constant="64" id="oFP-U1-1O3"/>
@@ -56,6 +72,7 @@
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BMc-hv-C0a" userLabel="SuggestHero2 ImageView">
                             <rect key="frame" x="178.5" y="1.5" width="64" height="61"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="64" id="NO9-n7-Wsb"/>
                                 <constraint firstAttribute="width" constant="64" id="l3W-A3-nyQ"/>
@@ -63,6 +80,7 @@
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fCM-zi-tbh" userLabel="SuggestHero3 ImageView">
                             <rect key="frame" x="250.5" y="1.5" width="64" height="61"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="64" id="ENc-5g-1K2"/>
                                 <constraint firstAttribute="width" constant="64" id="wDS-9b-KoF"/>
@@ -76,25 +94,26 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MAA-M0-unv" userLabel="Stack View Photo L">
                             <rect key="frame" x="0.0" y="0.0" width="64" height="208"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="terminal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="i0I-lf-nPo" userLabel="Attack ImageView">
-                                    <rect key="frame" x="0.0" y="1" width="64" height="61.5"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="singleSword" translatesAutoresizingMaskIntoConstraints="NO" id="i0I-lf-nPo" userLabel="Attack ImageView">
+                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="64" id="8yJ-vx-Kzz"/>
-                                        <constraint firstAttribute="width" constant="64" id="bi2-Y1-rNn"/>
+                                        <constraint firstAttribute="height" constant="64" id="8yJ-vx-Kzz" userLabel="height = 32"/>
+                                        <constraint firstAttribute="width" constant="64" id="bi2-Y1-rNn" userLabel="width = 32"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="terminal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xkV-1r-N7Q" userLabel="Defend ImageView">
-                                    <rect key="frame" x="0.0" y="73" width="64" height="61.5"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shield" translatesAutoresizingMaskIntoConstraints="NO" id="xkV-1r-N7Q" userLabel="Defend ImageView">
+                                    <rect key="frame" x="0.0" y="72" width="64" height="64"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="64" id="Wvn-iS-424"/>
-                                        <constraint firstAttribute="width" constant="64" id="qgC-bU-sRk"/>
+                                        <constraint firstAttribute="height" constant="64" id="Wvn-iS-424" userLabel="height = 32"/>
+                                        <constraint firstAttribute="width" constant="64" id="qgC-bU-sRk" userLabel="width = 32"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="terminal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4lS-vl-v7B" userLabel="Speed ImageView">
-                                    <rect key="frame" x="0.0" y="145" width="64" height="61.5"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footPrinting" translatesAutoresizingMaskIntoConstraints="NO" id="4lS-vl-v7B" userLabel="Speed ImageView">
+                                    <rect key="frame" x="0.0" y="144" width="64" height="64"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="64" id="ZuI-kw-TJA"/>
-                                        <constraint firstAttribute="height" constant="64" id="qF8-Wj-2xC"/>
+                                        <constraint firstAttribute="width" constant="64" id="ZuI-kw-TJA" userLabel="width = 32"/>
+                                        <constraint firstAttribute="height" constant="64" id="qF8-Wj-2xC" userLabel="height = 32"/>
                                     </constraints>
                                 </imageView>
                             </subviews>
@@ -130,25 +149,25 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jcx-2N-RFG" userLabel="Stack View Photo L">
                             <rect key="frame" x="0.0" y="0.0" width="64" height="208"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="terminal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qm0-2g-fso" userLabel="HP ImageView">
-                                    <rect key="frame" x="0.0" y="1" width="64" height="61.5"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health" translatesAutoresizingMaskIntoConstraints="NO" id="qm0-2g-fso" userLabel="HP ImageView">
+                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="64" id="L8c-88-AMR"/>
-                                        <constraint firstAttribute="height" constant="64" id="x1k-2a-w3f"/>
+                                        <constraint firstAttribute="width" constant="64" id="L8c-88-AMR" userLabel="width = 32"/>
+                                        <constraint firstAttribute="height" constant="64" id="x1k-2a-w3f" userLabel="height = 32"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="terminal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ekF-PX-hBG" userLabel="Heal ImageView">
-                                    <rect key="frame" x="0.0" y="73" width="64" height="61.5"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jar" translatesAutoresizingMaskIntoConstraints="NO" id="ekF-PX-hBG" userLabel="Heal ImageView">
+                                    <rect key="frame" x="0.0" y="72" width="64" height="64"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="64" id="KDC-iF-RGA"/>
-                                        <constraint firstAttribute="height" constant="64" id="y7V-pv-iRZ"/>
+                                        <constraint firstAttribute="width" constant="64" id="KDC-iF-RGA" userLabel="width = 32"/>
+                                        <constraint firstAttribute="height" constant="64" id="y7V-pv-iRZ" userLabel="height = 32"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="terminal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0GU-aZ-Eus" userLabel="Type ImageView">
-                                    <rect key="frame" x="0.0" y="145" width="64" height="61.5"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gear" translatesAutoresizingMaskIntoConstraints="NO" id="0GU-aZ-Eus" userLabel="Type ImageView">
+                                    <rect key="frame" x="0.0" y="144" width="64" height="64"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="64" id="eC5-tZ-aUg"/>
-                                        <constraint firstAttribute="width" constant="64" id="ytM-Vg-wH6"/>
+                                        <constraint firstAttribute="height" constant="64" id="eC5-tZ-aUg" userLabel="height = 32"/>
+                                        <constraint firstAttribute="width" constant="64" id="ytM-Vg-wH6" userLabel="width = 32"/>
                                     </constraints>
                                 </imageView>
                             </subviews>
@@ -179,10 +198,10 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aR9-Eq-abs" userLabel="Stack View MainHero">
-                    <rect key="frame" x="52" y="144" width="258" height="64"/>
+                    <rect key="frame" x="52" y="196" width="258" height="64"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="terminal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mpt-P0-2vN" userLabel="AttackMode ImageView">
-                            <rect key="frame" x="0.0" y="1" width="64" height="61.5"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doubleSword" translatesAutoresizingMaskIntoConstraints="NO" id="mpt-P0-2vN" userLabel="AttackMode ImageView">
+                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="64" id="JBE-mU-FHI"/>
                                 <constraint firstAttribute="width" constant="64" id="SJc-89-YTb"/>
@@ -215,7 +234,7 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="Inteligent"/>
             <constraints>
                 <constraint firstItem="03K-Q3-9N2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="KtF-RL-YDI"/>
                 <constraint firstItem="fZd-rS-MT8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="RYJ-BG-UNN"/>
@@ -232,10 +251,16 @@
         </view>
     </objects>
     <resources>
+        <image name="doubleSword" width="22" height="22"/>
+        <image name="footPrinting" width="21.5" height="21.5"/>
+        <image name="gear" width="21.5" height="21.5"/>
+        <image name="health" width="21.5" height="21.5"/>
+        <image name="jar" width="16" height="16.5"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="terminal" catalog="system" width="128" height="93"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="shield" width="21.5" height="21.5"/>
+        <image name="singleSword" width="22" height="22"/>
+        <namedColor name="Inteligent">
+            <color red="0.50980392156862742" green="0.71372549019607845" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

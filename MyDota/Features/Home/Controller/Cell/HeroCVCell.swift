@@ -24,8 +24,4 @@ class HeroCVCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    public func configureData(with model: GeneralData){
-        self.heroNameLabel.text = model.name
-//        self.heroImageView.image = UIImage(named: model.image)
-    }
 }

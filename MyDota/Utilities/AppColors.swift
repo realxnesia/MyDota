@@ -9,5 +9,7 @@ import Foundation
 import UIKit
 
 extension UIColor{
-//    static let primaryColor = UIColor(named: "xx")
+    static let strength = UIColor(named: "Strength")
+    static let agility = UIColor(named: "Agility")
+    static let inteligent = UIColor(named: "Inteligent")
 }

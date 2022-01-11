@@ -62,6 +62,7 @@ class ViewController: UIViewController {
         let unwrapTitle = homeTitle ?? "All Hero"
         self.navigationItem.title = unwrapTitle
         self.navigationItem.setHidesBackButton(true, animated: true)
+        self.tableList.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
         
 }
@@ -82,9 +83,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        switch indexPath.row{
+//        case 0:
+//            return 64
+//        default:
+//            //return UITableView.automaticDimension
+//            return 64
+//
+//        }
+//    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableList.deselectRow(at: indexPath, animated: true)
-            
     }
 }
 
@@ -136,10 +147,3 @@ extension ViewController: NavigationDelegate{
         navigationController?.pushViewController(vc, animated: false)
     }
 }
-
-// /apps/dota2/images/dota_react/heroes/antimage.png?
-
-
-
-
-

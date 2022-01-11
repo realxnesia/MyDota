@@ -26,19 +26,14 @@ class HeroDetailViewController: UIViewController {
     private var models: [Codable] = []
     
     @IBOutlet weak var heroImageView: UIImageView!
-    
     @IBOutlet weak var suggestHeroImageView1: UIImageView!
     @IBOutlet weak var suggestHeroImageView2: UIImageView!
     @IBOutlet weak var suggestHeroImageView3: UIImageView!
-    
     @IBOutlet weak var heroNameLabel: UILabel!
     @IBOutlet weak var roleLabel: UILabel!
-    
-    
     @IBOutlet weak var attackLabel: UILabel!
     @IBOutlet weak var armorLabel: UILabel!
     @IBOutlet weak var speedLabel: UILabel!
-    
     @IBOutlet weak var hpLabel: UILabel!
     @IBOutlet weak var manaLabel: UILabel!
     @IBOutlet weak var Label: UILabel!
@@ -46,6 +41,8 @@ class HeroDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        navigationController?.navigationBar.tintColor = .black
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,7 +63,6 @@ extension HeroDetailViewController{
         if let urlImage = URL(string: APIConstant.BASE_URL + heroImage){
             heroImageView.load(url: urlImage)
         }
-        //heroImageView.load(url: APIConstant.BASE_URL + heroImage)
         roleLabel.text = heroRoles.joined(separator: ",")
         attackLabel.text = "\(baseAttackMin) - \(baseAttackMax)"
         armorLabel.text = String(format: "%.2f", baseArmor!)
@@ -74,5 +70,18 @@ extension HeroDetailViewController{
         hpLabel.text = String(baseHealth)
         manaLabel.text = String(baseMana)
         Label.text = atributeType
+        
+        //MARK: - Change Background Color
+        switch atributeType{
+        case "str":
+            view.backgroundColor = UIColor.strength
+        case "agi":
+            view.backgroundColor = UIColor.agility
+        case "int":
+            view.backgroundColor = UIColor.inteligent
+        default:
+            view.backgroundColor = UIColor.purple
+        }
+        
     }
 }
