@@ -13,12 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableList: UITableView!
     @IBOutlet weak var collectionList: UICollectionView!
     
+    //MARK: - Related to Dummy Data 
+    let fullDetailHero = localData.intializeData()
     
-
-    let fullDetailHero = localData.intializeData() //Dummy hero -> tidak digunakan lagi
-
-
-
     //MARK: - Related to API Request from Button in Table View
     let roles = ["Carry", "Disabler", "Durable", "Escape", "Initiator", "Jungler", "Nuker", "Pusher", "Support", "All Hero"]
     var heroesFiltered = [String]()
@@ -133,20 +130,38 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = HeroDetailViewController()
+        
         //MARK: Send Data to HeroDetailViewController()
-        vc.heroName = heroesFiltered[indexPath.row]
-        vc.heroRoles = [tempRole[indexPath.row]]
-        vc.heroImage = tempHeroesImage[indexPath.row]
+        if heroesFiltered.count != 0{
+            vc.heroName = heroesFiltered[indexPath.row]
+            vc.heroRoles = [tempRole[indexPath.row]]
+            vc.heroImage = tempHeroesImage[indexPath.row]
+            
+            vc.baseAttackMin = tempBaseAttackMin[indexPath.row]
+            vc.baseAttackMax = tempBaseAttackMax[indexPath.row]
+            vc.baseArmor = tempBaseArmor[indexPath.row]
+            vc.moveSpeed = tempMoveSpeed[indexPath.row]
+            vc.baseHealth = tempBaseHealth[indexPath.row]
+            vc.baseMana = tempBaseMana[indexPath.row]
+            vc.atributeType = tempAtribute[indexPath.row]
+            navigationController?.pushViewController(vc, animated: false)
+        }else{
+            vc.heroName = dataSavedFromCoreData[indexPath.row].localizedName
+            //vc.heroRoles = dataSavedFromCoreData[indexPath.row].roles[0]
+            vc.heroImage = dataSavedFromCoreData[indexPath.row].img!
+            
+            vc.baseAttackMin = Int(dataSavedFromCoreData[indexPath.row].baseAttackMin)
+            vc.baseAttackMax = Int(dataSavedFromCoreData[indexPath.row].baseAttackMax)
+            vc.baseArmor = dataSavedFromCoreData[indexPath.row].baseArmor
+            vc.moveSpeed = Int(dataSavedFromCoreData[indexPath.row].moveSpeed)
+            vc.baseHealth = Int(dataSavedFromCoreData[indexPath.row].baseHealth)
+            vc.baseMana = Int(dataSavedFromCoreData[indexPath.row].baseMana)
+            vc.atributeType = dataSavedFromCoreData[indexPath.row].primaryAttr
+            navigationController?.pushViewController(vc, animated: false)
+        }
         
-        vc.baseAttackMin = tempBaseAttackMin[indexPath.row]
-        vc.baseAttackMax = tempBaseAttackMax[indexPath.row]
-        vc.baseArmor = tempBaseArmor[indexPath.row]
-        vc.moveSpeed = tempMoveSpeed[indexPath.row]
-        vc.baseHealth = tempBaseHealth[indexPath.row]
-        vc.baseMana = tempBaseMana[indexPath.row]
-        vc.atributeType = tempAtribute[indexPath.row]
         
-        navigationController?.pushViewController(vc, animated: false)
+        
     }
 }
 

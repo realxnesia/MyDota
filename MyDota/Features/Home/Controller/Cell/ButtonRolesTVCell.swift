@@ -20,13 +20,15 @@ protocol NavigationDelegate{
 
 class ButtonRolesTVCell: UITableViewCell {
     
+    //MARK: Related to TableView
     weak var delegate: titleLabelDelegate?
     var navDelegate: NavigationDelegate?
     private var title: String = ""
+    
+    //MARK: - Related to API Request
     private var models: [Codable] = []
     var heroName = [String]()
     var heroImages = [String]()
-    
     var role = [String]()
     var baseAttackMin = [Int]()
     var baseAttackMax = [Int]()
@@ -36,12 +38,12 @@ class ButtonRolesTVCell: UITableViewCell {
     var baseMana = [Int]()
     var atribute = [String]()
     
-    //MARK: CoreData
+    //MARK: - Related to CoreData
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     let database = DatabaseHandler()
     var dataHeroFiltered = [HeroesEntity]()
     var dataRoleFiltered = [RoleEntity]()
-    var dataHeroFiltered2 = [HeroesEntity]()
+
     
     @IBOutlet weak var roleButton: UIButton!
     
@@ -201,11 +203,11 @@ extension ButtonRolesTVCell{
     //MARK: Fetch from Core Data
     func fetchRole(with identifierRoles: String){
         do{
-            let request2: NSFetchRequest<HeroesEntity> = HeroesEntity.fetchRequest()
+            let request: NSFetchRequest<HeroesEntity> = HeroesEntity.fetchRequest()
             //request2.predicate = NSPredicate(format: "roles CONTAINS %@", identifierRoles)
-            request2.predicate = NSPredicate(format: "ANY roles CONTAINS[c] %@", identifierRoles)
+            request.predicate = NSPredicate(format: "ANY roles CONTAINS[c] %@", identifierRoles)
 
-            dataHeroFiltered = try context.viewContext.fetch(request2)
+            dataHeroFiltered = try context.viewContext.fetch(request)
             print(dataHeroFiltered)
             print(dataHeroFiltered.count)
         }catch{

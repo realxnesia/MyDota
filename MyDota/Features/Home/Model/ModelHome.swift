@@ -23,22 +23,3 @@ struct GeneralData: Codable{
     let type: String
 }
 
-
-struct Gg: Codable{
-    let namaHero: String
-    let posisi: [Posisi]
-}
-
-enum Posisi: String, Codable {
-    case carry = "Carry"
-    case disabler = "Disabler"
-    case durable = "Durable"
-    case escape = "Escape"
-    case initiator = "Initiator"
-    case jungler = "Jungler"
-    case nuker = "Nuker"
-    case pusher = "Pusher"
-    case support = "Support"
-}
-
-

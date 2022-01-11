@@ -7,15 +7,9 @@
 
 import Foundation
 
-typealias ModelDetailHeroes2 = [CustomModelDetailHeroElement]
+///the model used to store data into the data core is different from the model for the API
 
-//struct DataHero: Codable{
-//    let ModelDetailHeroes2: [CustomModelDetailHeroElement]?
-//
-//    private enum CodingKeys: String, CodingKey{
-//        case ModelDetailHeroes2 = "array"
-//    }
-//}
+typealias ModelDetailHeroes2 = [CustomModelDetailHeroElement]
 
 struct CustomModelDetailHeroElement: Codable {
     let id: Int
