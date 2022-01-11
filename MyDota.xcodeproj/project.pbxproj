@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		703794A8278D452100B4AF8A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703794A6278D452100B4AF8A /* SplashViewController.swift */; };
+		703794A9278D452100B4AF8A /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 703794A7278D452100B4AF8A /* SplashViewController.xib */; };
+		703794AB278D459600B4AF8A /* CustomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703794AA278D459600B4AF8A /* CustomModel.swift */; };
+		703794AD278D472A00B4AF8A /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703794AC278D472A00B4AF8A /* APIService.swift */; };
+		703794AF278D4C4100B4AF8A /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703794AE278D4C4100B4AF8A /* BaseVC.swift */; };
+		703794B6278D51C600B4AF8A /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703794B5278D51C600B4AF8A /* CoreData.swift */; };
 		70651997278824C200489194 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70651996278824C200489194 /* AppDelegate.swift */; };
 		70651999278824C200489194 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70651998278824C200489194 /* SceneDelegate.swift */; };
 		706519A0278824C300489194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7065199F278824C300489194 /* Assets.xcassets */; };
@@ -28,9 +34,16 @@
 		706519F42788825E00489194 /* ModelDetailHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519F32788825E00489194 /* ModelDetailHero.swift */; };
 		706519F82788924500489194 /* AltButtonRolesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706519F62788924500489194 /* AltButtonRolesTVCell.swift */; };
 		706519F92788924500489194 /* AltButtonRolesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706519F72788924500489194 /* AltButtonRolesTVCell.xib */; };
+		7066094A278D76CB00DEE0C4 /* HeroesEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70660949278D76CB00DEE0C4 /* HeroesEntities.swift */; };
+		7066094C278D788400DEE0C4 /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7066094B278D788400DEE0C4 /* DatabaseHandler.swift */; };
 		707189A2278C481D00707E9D /* AppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707189A1278C481D00707E9D /* AppUtilities.swift */; };
 		7082DD45278934E500EE7455 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7082DD44278934E500EE7455 /* BaseRequest.swift */; };
 		7082DD492789385200EE7455 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7082DD482789385200EE7455 /* APIConstant.swift */; };
+		70F96D70278D9EC100AB836E /* MyDota.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70F96D6E278D9EC100AB836E /* MyDota.xcdatamodeld */; };
+		70F96D75278D9F8300AB836E /* HeroesEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F96D71278D9F8300AB836E /* HeroesEntity+CoreDataClass.swift */; };
+		70F96D76278D9F8300AB836E /* HeroesEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F96D72278D9F8300AB836E /* HeroesEntity+CoreDataProperties.swift */; };
+		70F96D77278D9F8300AB836E /* RoleEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F96D73278D9F8300AB836E /* RoleEntity+CoreDataClass.swift */; };
+		70F96D78278D9F8300AB836E /* RoleEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F96D74278D9F8300AB836E /* RoleEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +64,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		703794A6278D452100B4AF8A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		703794A7278D452100B4AF8A /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		703794AA278D459600B4AF8A /* CustomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModel.swift; sourceTree = "<group>"; };
+		703794AC278D472A00B4AF8A /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		703794AE278D4C4100B4AF8A /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		703794B5278D51C600B4AF8A /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		70651993278824C200489194 /* MyDota.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDota.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70651996278824C200489194 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70651998278824C200489194 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,9 +95,16 @@
 		706519F32788825E00489194 /* ModelDetailHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDetailHero.swift; sourceTree = "<group>"; };
 		706519F62788924500489194 /* AltButtonRolesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltButtonRolesTVCell.swift; sourceTree = "<group>"; };
 		706519F72788924500489194 /* AltButtonRolesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AltButtonRolesTVCell.xib; sourceTree = "<group>"; };
+		70660949278D76CB00DEE0C4 /* HeroesEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesEntities.swift; sourceTree = "<group>"; };
+		7066094B278D788400DEE0C4 /* DatabaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHandler.swift; sourceTree = "<group>"; };
 		707189A1278C481D00707E9D /* AppUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtilities.swift; sourceTree = "<group>"; };
 		7082DD44278934E500EE7455 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		7082DD482789385200EE7455 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		70F96D6F278D9EC100AB836E /* MyDota.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyDota.xcdatamodel; sourceTree = "<group>"; };
+		70F96D71278D9F8300AB836E /* HeroesEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroesEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		70F96D72278D9F8300AB836E /* HeroesEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroesEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		70F96D73278D9F8300AB836E /* RoleEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoleEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		70F96D74278D9F8300AB836E /* RoleEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoleEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +132,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		703794A2278D44F600B4AF8A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				703794A5278D450D00B4AF8A /* Controller */,
+				703794A4278D450900B4AF8A /* View */,
+				703794A3278D450400B4AF8A /* Model */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		703794A3278D450400B4AF8A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				703794AA278D459600B4AF8A /* CustomModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		703794A4278D450900B4AF8A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				703794A7278D452100B4AF8A /* SplashViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		703794A5278D450D00B4AF8A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				703794A6278D452100B4AF8A /* SplashViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		703794B0278D4DAD00B4AF8A /* PersitenceStorage */ = {
+			isa = PBXGroup;
+			children = (
+				703794B1278D4DEE00B4AF8A /* CoreData */,
+			);
+			path = PersitenceStorage;
+			sourceTree = "<group>";
+		};
+		703794B1278D4DEE00B4AF8A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				70F96D6E278D9EC100AB836E /* MyDota.xcdatamodeld */,
+				703794B5278D51C600B4AF8A /* CoreData.swift */,
+				70660949278D76CB00DEE0C4 /* HeroesEntities.swift */,
+				7066094B278D788400DEE0C4 /* DatabaseHandler.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		703974D0278A0C2D006EDAC7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				7082DD44278934E500EE7455 /* BaseRequest.swift */,
+				703794AC278D472A00B4AF8A /* APIService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -117,6 +197,10 @@
 		7065198A278824C100489194 = {
 			isa = PBXGroup;
 			children = (
+				70F96D71278D9F8300AB836E /* HeroesEntity+CoreDataClass.swift */,
+				70F96D72278D9F8300AB836E /* HeroesEntity+CoreDataProperties.swift */,
+				70F96D73278D9F8300AB836E /* RoleEntity+CoreDataClass.swift */,
+				70F96D74278D9F8300AB836E /* RoleEntity+CoreDataProperties.swift */,
 				70651995278824C200489194 /* MyDota */,
 				706519AC278824C300489194 /* MyDotaTests */,
 				706519B6278824C300489194 /* MyDotaUITests */,
@@ -178,6 +262,7 @@
 		706519C7278827E400489194 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				703794A2278D44F600B4AF8A /* Splash */,
 				706519CD278828F000489194 /* Home */,
 				706519EA2788635400489194 /* Hero Detail */,
 			);
@@ -204,6 +289,7 @@
 		706519CC2788289100489194 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				703794B0278D4DAD00B4AF8A /* PersitenceStorage */,
 				7082DD462789381D00EE7455 /* Network */,
 				706519E22788324100489194 /* LocalData.swift */,
 				706519F32788825E00489194 /* ModelDetailHero.swift */,
@@ -303,6 +389,7 @@
 		7082DD43278934C200EE7455 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				703794AE278D4C4100B4AF8A /* BaseVC.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -431,6 +518,7 @@
 				706519E927885E8700489194 /* HeroCVCell.xib in Resources */,
 				706519A3278824C300489194 /* LaunchScreen.storyboard in Resources */,
 				706519F92788924500489194 /* AltButtonRolesTVCell.xib in Resources */,
+				703794A9278D452100B4AF8A /* SplashViewController.xib in Resources */,
 				706519DC27882C0E00489194 /* ButtonRolesTVCell.xib in Resources */,
 				706519F22788659A00489194 /* HeroDetailViewController.xib in Resources */,
 				706519D62788293100489194 /* ViewController.xib in Resources */,
@@ -459,19 +547,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				703794AD278D472A00B4AF8A /* APIService.swift in Sources */,
 				706519F42788825E00489194 /* ModelDetailHero.swift in Sources */,
 				706519DB27882C0E00489194 /* ButtonRolesTVCell.swift in Sources */,
+				703794B6278D51C600B4AF8A /* CoreData.swift in Sources */,
 				706519F12788659A00489194 /* HeroDetailViewController.swift in Sources */,
 				706519CA2788282200489194 /* AppColors.swift in Sources */,
 				7082DD45278934E500EE7455 /* BaseRequest.swift in Sources */,
 				70651997278824C200489194 /* AppDelegate.swift in Sources */,
 				707189A2278C481D00707E9D /* AppUtilities.swift in Sources */,
+				7066094A278D76CB00DEE0C4 /* HeroesEntities.swift in Sources */,
 				706519D52788293100489194 /* ViewController.swift in Sources */,
+				703794AB278D459600B4AF8A /* CustomModel.swift in Sources */,
 				706519E12788310D00489194 /* ModelHome.swift in Sources */,
+				703794A8278D452100B4AF8A /* SplashViewController.swift in Sources */,
+				7066094C278D788400DEE0C4 /* DatabaseHandler.swift in Sources */,
+				70F96D70278D9EC100AB836E /* MyDota.xcdatamodeld in Sources */,
+				70F96D75278D9F8300AB836E /* HeroesEntity+CoreDataClass.swift in Sources */,
 				70651999278824C200489194 /* SceneDelegate.swift in Sources */,
+				703794AF278D4C4100B4AF8A /* BaseVC.swift in Sources */,
 				706519F82788924500489194 /* AltButtonRolesTVCell.swift in Sources */,
 				706519E32788324100489194 /* LocalData.swift in Sources */,
 				7082DD492789385200EE7455 /* APIConstant.swift in Sources */,
+				70F96D76278D9F8300AB836E /* HeroesEntity+CoreDataProperties.swift in Sources */,
+				70F96D77278D9F8300AB836E /* RoleEntity+CoreDataClass.swift in Sources */,
+				70F96D78278D9F8300AB836E /* RoleEntity+CoreDataProperties.swift in Sources */,
 				706519E827885E8700489194 /* HeroCVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -810,6 +910,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		70F96D6E278D9EC100AB836E /* MyDota.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				70F96D6F278D9EC100AB836E /* MyDota.xcdatamodel */,
+			);
+			currentVersion = 70F96D6F278D9EC100AB836E /* MyDota.xcdatamodel */;
+			path = MyDota.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7065198B278824C100489194 /* Project object */;
 }

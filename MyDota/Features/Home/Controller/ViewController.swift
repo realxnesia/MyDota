@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     let roles = ["Carry", "Disabler", "Durable", "Escape", "Initiator", "Jungler", "Nuker", "Pusher", "Support", "All Hero"]
     var heroesFiltered = [String]()
     var tempHeroesImage = [String]()
+    var dataHeroFromSplash = [HeroesEntity]()
+    var dataRoleFromSplash = [RoleEntity]()
     var homeTitle: String?
     private var models: [Codable] = []
     
@@ -40,6 +42,7 @@ class ViewController: UIViewController {
         collectionList.dataSource = self
         configureView()
         configureCell()
+        print(dataHeroFromSplash)
     }
     
     override func viewWillAppear(_ animated: Bool) {

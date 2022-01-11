@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="HeroesEntity" representedClassName=".HeroesEntity" syncable="YES">
+        <attribute name="attackRate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="attackType" optional="YES" attributeType="String"/>
+        <attribute name="baseAgi" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="baseArmor" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="baseAttackMax" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="baseAttackMin" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="baseHealth" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="baseInt" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="baseMana" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="baseStr" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="icon" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="img" optional="YES" attributeType="String"/>
+        <attribute name="localizedName" optional="YES" attributeType="String"/>
+        <attribute name="moveSpeed" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="primaryAttr" optional="YES" attributeType="String"/>
+        <attribute name="roles" optional="YES" attributeType="String"/>
+        <relationship name="role" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RoleEntity" inverseName="hero" inverseEntity="RoleEntity"/>
+    </entity>
+    <entity name="RoleEntity" representedClassName=".RoleEntity" syncable="YES">
+        <attribute name="role" optional="YES" attributeType="String"/>
+        <relationship name="hero" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HeroesEntity" inverseName="role" inverseEntity="HeroesEntity"/>
+    </entity>
+    <elements>
+        <element name="HeroesEntity" positionX="-63" positionY="-18" width="128" height="314"/>
+        <element name="RoleEntity" positionX="-54" positionY="144" width="128" height="59"/>
+    </elements>
+</model>

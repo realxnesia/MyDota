@@ -53,7 +53,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let rootVC = ViewController()
+        let rootVC = SplashViewController()
         let navVC = UINavigationController(rootViewController: rootVC)
         window.rootViewController = navVC
         window.makeKeyAndVisible()
