@@ -5,6 +5,8 @@
 //  Created by DHIKA ADITYA ARE on 07/01/22.
 //
 
+///The model used to the API
+
 // MARK: - ModelDetailHeroElement
 struct ModelDetailHeroElement: Codable {
     let id: Int

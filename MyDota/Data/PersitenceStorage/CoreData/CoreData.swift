@@ -19,7 +19,6 @@ class CoreData{
     
     private let fetchRequest = NSFetchRequest<HeroesEntities>(entityName: "HeroesEntities")
     
-    //MARK:
     func saveDataOf(heroes: [CustomModelDetailHeroElement]){
         
         //update CoreData with the new Data - off the main thread

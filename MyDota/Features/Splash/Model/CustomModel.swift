@@ -7,7 +7,7 @@
 
 import Foundation
 
-///the model used to store data into the data core is different from the model for the API
+///the model used to store data into the core data
 
 typealias ModelDetailHeroes2 = [CustomModelDetailHeroElement]
 

@@ -9,7 +9,7 @@ import UIKit
 
 class HeroDetailViewController: UIViewController {
 
-    //MARK: - Data Temp
+    //MARK: - Data Temp 
     var heroName: String?
     var heroImage: String = ""
     var heroRoles: [String] = []

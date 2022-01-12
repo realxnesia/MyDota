@@ -94,16 +94,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 }
 
 
-//MARK: Collection view Heroes
+//MARK: - Collection view Heroes
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //return heroesFiltered.count //MARK: ini udah bener
         //dataHeroFromSplash.count
         if heroesFiltered.count != 0{
-            //Get From API
+            //MARK: Get data From API
             return heroesFiltered.count
         }else{
-            //Get From Core Data
+            //MARK: Get data From Core Data
             return dataHeroFromSplash.count
         }
     }
@@ -112,12 +112,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         let heroCell = collectionView.dequeueReusableCell(withReuseIdentifier: HeroCVCell.identifier, for: indexPath) as! HeroCVCell
         
         if heroesFiltered.count != 0{
+            //MARK: Fetch data From API
             if let url = URL(string: APIConstant.BASE_URL + tempHeroesImage[indexPath.row]){
                 heroCell.heroImageView.load(url: url)
             }
             heroCell.heroNameLabel.text = heroesFiltered[indexPath.row]
         }else{
-            //Fetch data from core data
+            //MARK: Fetch data From Core Data
             self.dataSavedFromCoreData = self.database.fetch(HeroesEntity.self)
             if let url = URL(string: APIConstant.BASE_URL + dataSavedFromCoreData[indexPath.row].img!){
                 heroCell.heroImageView.load(url: url)
@@ -133,6 +134,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         
         //MARK: Send Data to HeroDetailViewController()
         if heroesFiltered.count != 0{
+            //MARK: Get data From API
             vc.heroName = heroesFiltered[indexPath.row]
             vc.heroRoles = [tempRole[indexPath.row]]
             vc.heroImage = tempHeroesImage[indexPath.row]
@@ -146,10 +148,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             vc.atributeType = tempAtribute[indexPath.row]
             navigationController?.pushViewController(vc, animated: false)
         }else{
+            //MARK: Get data From Core Data
             vc.heroName = dataSavedFromCoreData[indexPath.row].localizedName
             //vc.heroRoles = dataSavedFromCoreData[indexPath.row].roles[0]
             vc.heroImage = dataSavedFromCoreData[indexPath.row].img!
-            
             vc.baseAttackMin = Int(dataSavedFromCoreData[indexPath.row].baseAttackMin)
             vc.baseAttackMax = Int(dataSavedFromCoreData[indexPath.row].baseAttackMax)
             vc.baseArmor = dataSavedFromCoreData[indexPath.row].baseArmor
@@ -159,9 +161,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
             vc.atributeType = dataSavedFromCoreData[indexPath.row].primaryAttr
             navigationController?.pushViewController(vc, animated: false)
         }
-        
-        
-        
     }
 }
 

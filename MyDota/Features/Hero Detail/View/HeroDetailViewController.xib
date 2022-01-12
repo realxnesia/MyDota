@@ -31,11 +31,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="03K-Q3-9N2" userLabel="Hero ImageView">
-                    <rect key="frame" x="52" y="9.5" width="256" height="177"/>
+                    <rect key="frame" x="52" y="9.5" width="200" height="177"/>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="180" id="gKm-L2-MEI"/>
-                        <constraint firstAttribute="width" constant="256" id="ryv-Sa-q3l"/>
+                        <constraint firstAttribute="width" constant="200" id="ryv-Sa-q3l"/>
                     </constraints>
                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                     <userDefinedRuntimeAttributes>
@@ -251,16 +251,16 @@
         </view>
     </objects>
     <resources>
-        <image name="doubleSword" width="22" height="22"/>
+        <image name="doubleSword" width="21.5" height="21.5"/>
         <image name="footPrinting" width="21.5" height="21.5"/>
         <image name="gear" width="21.5" height="21.5"/>
         <image name="health" width="21.5" height="21.5"/>
         <image name="jar" width="16" height="16.5"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="shield" width="21.5" height="21.5"/>
-        <image name="singleSword" width="22" height="22"/>
+        <image name="singleSword" width="21.5" height="21.5"/>
         <namedColor name="Inteligent">
-            <color red="0.50980392156862742" green="0.71372549019607845" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.50999999046325684" green="0.71399998664855957" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -7,6 +7,7 @@
 
 import Foundation
 
+///Model data for dummy data (hard code)
 
 struct GeneralData: Codable{
     ///Data Hero for Home view

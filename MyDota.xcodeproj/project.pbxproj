@@ -177,6 +177,7 @@
 		703794B1278D4DEE00B4AF8A /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				70FDE802278E79F30064E720 /* Entities */,
 				70F96D6E278D9EC100AB836E /* MyDota.xcdatamodeld */,
 				703794B5278D51C600B4AF8A /* CoreData.swift */,
 				70660949278D76CB00DEE0C4 /* HeroesEntities.swift */,
@@ -197,10 +198,6 @@
 		7065198A278824C100489194 = {
 			isa = PBXGroup;
 			children = (
-				70F96D71278D9F8300AB836E /* HeroesEntity+CoreDataClass.swift */,
-				70F96D72278D9F8300AB836E /* HeroesEntity+CoreDataProperties.swift */,
-				70F96D73278D9F8300AB836E /* RoleEntity+CoreDataClass.swift */,
-				70F96D74278D9F8300AB836E /* RoleEntity+CoreDataProperties.swift */,
 				70651995278824C200489194 /* MyDota */,
 				706519AC278824C300489194 /* MyDotaTests */,
 				706519B6278824C300489194 /* MyDotaUITests */,
@@ -409,6 +406,17 @@
 				7082DD482789385200EE7455 /* APIConstant.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		70FDE802278E79F30064E720 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				70F96D71278D9F8300AB836E /* HeroesEntity+CoreDataClass.swift */,
+				70F96D72278D9F8300AB836E /* HeroesEntity+CoreDataProperties.swift */,
+				70F96D73278D9F8300AB836E /* RoleEntity+CoreDataClass.swift */,
+				70F96D74278D9F8300AB836E /* RoleEntity+CoreDataProperties.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
