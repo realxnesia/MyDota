@@ -107,8 +107,7 @@ extension ButtonRolesTVCell{
             case .success(let item):
                 self.models = item
                 print(item)
-                
-                ////https://stackoverflow.com/questions/44609216/dictionaries-string-string-in-swift
+ 
                 let filtered = item.filter{ $0.roles.contains(identifierRoles) }
                 for hero in 0..<filtered.count{
                     self.heroName.insert(filtered[hero].localizedName, at: 0)
@@ -144,7 +143,6 @@ extension ButtonRolesTVCell{
                     vc.tempAtribute = self.atribute
                     
                     self.navDelegate?.navigationToMainVC(vc: vc)
-
                 }
             case .failure(let error):
                 print(error)
@@ -199,7 +197,7 @@ extension ButtonRolesTVCell{
     }
     
     
-    //MARK: Fetch from Core Data
+    //MARK: - Fetch from Core Data
     func fetchRole(with identifierRoles: String){
         do{
             let request: NSFetchRequest<HeroesEntity> = HeroesEntity.fetchRequest()
@@ -216,17 +214,6 @@ extension ButtonRolesTVCell{
     }
 }
 
-extension RangeReplaceableCollection where Element: Equatable {
-    @discardableResult
-    mutating func appendIfNotContains(_ element: Element) -> (appended: Bool, memberAfterAppend: Element) {
-        if let index = firstIndex(of: element) {
-            return (false, self[index])
-        } else {
-            append(element)
-            return (true, element)
-        }
-    }
-}
 
 
 

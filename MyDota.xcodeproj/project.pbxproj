@@ -289,7 +289,6 @@
 				703794B0278D4DAD00B4AF8A /* PersitenceStorage */,
 				7082DD462789381D00EE7455 /* Network */,
 				706519E22788324100489194 /* LocalData.swift */,
-				706519F32788825E00489194 /* ModelDetailHero.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -308,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				706519E02788310D00489194 /* ModelHome.swift */,
+				706519F32788825E00489194 /* ModelDetailHero.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
